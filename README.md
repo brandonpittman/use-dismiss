@@ -1,4 +1,4 @@
-# ⚛ useDismiss
+# 🧹 useDismiss
 
 The `useDismiss()` hook for React takes in a React ref and a callback and can invoke the callback when a click event occurs outside the ref's bounds, when the escape key is pressed, **or both**.
 
