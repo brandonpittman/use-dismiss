@@ -1,6 +1,6 @@
 {
   "name": "use-dismiss",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React hook that triggers a callback when user clicks outside the element.",
   "author": {
     "name": "Brandon Pittman",
