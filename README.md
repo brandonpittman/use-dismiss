@@ -20,7 +20,7 @@ import useDismiss from "use-dismiss";
 
 ### Full example
 
-```
+```jsx
 export default () => {
   const [modal, setModal] = React.useState(false);
   const clickRef = React.useRef("");
