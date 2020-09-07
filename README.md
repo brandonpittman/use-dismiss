@@ -1,13 +1,11 @@
-# React hook to detect click, touch, and escape key events 
+# ⚛ useDismiss
 
-React hook `useDismiss()` that reacts to clicks outside the bound element, and calls the expression that is passed in when this event is detected.
+The `useDismiss()` hook for React takes in a React ref and a callback and can invoke the callback when a click event occurs outside the ref's bounds, when the escape key is pressed, **or both**.
 
-Suppose you're working on a Modal component that renders a dialog box, and you wish to close the modal if the user clicks away this is the ideal scenario for `useDismiss()` custom hook.
-
-## Installation
+## Setup
 
 ```sh
-npm i use-dismiss
+npm i use-dismiss #or yarn add use-dismiss
 ```
 
 ## Usage
@@ -21,6 +19,8 @@ import useDismiss from "use-dismiss";
 ### Full example
 
 ```jsx
+import * as React from "react"
+
 export default () => {
   const [modal, setModal] = React.useState(false);
   const clickRef = React.useRef("");
