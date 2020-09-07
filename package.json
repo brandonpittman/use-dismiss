@@ -1,11 +1,11 @@
 {
-  "name": "use-click-away",
-  "version": "1.0.1",
+  "name": "use-dismiss",
+  "version": "1.0.0",
   "description": "React hook that triggers a callback when user clicks outside the element.",
   "author": {
-    "name": "George Bardi",
-    "email": "geobde@gmail.com",
-    "url": "https://twitter.com/geobde"
+    "name": "Brandon Pittman",
+    "email": "github@brandonpittman.net",
+    "url": "https://twitter.com/brandonpittman"
   },
   "keywords": [
     "react",
@@ -14,6 +14,8 @@
     "click outside",
     "onclickoutside",
     "click",
+    "escape",
+    "dismiss",
     "domout",
     "document",
     "browser",
@@ -37,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/geobde/use-click-away"
+    "url": "https://github.com/brandonpittman/use-dismiss"
   },
   "bugs": {
-    "url": "https://github.com/geobde/use-click-away/issues"
+    "url": "https://github.com/brandonpittman/use-dismiss/issues"
   }
 }
