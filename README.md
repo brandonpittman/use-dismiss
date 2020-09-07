@@ -1,14 +1,14 @@
-# ⚛ useDismiss 🧹
+# 🧹 useDismiss
 
 The `useDismiss()` hook for React takes in a React ref and a callback and can invoke the callback when a click event occurs outside the ref's bounds, when the escape key is pressed, **or both**.
 
-## Setup
+## ⌨ Setup
 
 ```sh
 npm i use-dismiss #or yarn add use-dismiss
 ```
 
-## Usage
+## ⚛ Usage
 
 Import the hook:
 
@@ -16,7 +16,7 @@ Import the hook:
 import useDismiss from "use-dismiss";
 ```
 
-### Full example
+### 🌐 Full example
 
 ```jsx
 import * as React from "react"
@@ -39,7 +39,7 @@ export default () => {
 
 ```
 
-## API
+## 📄 API
 
 - `ref: React ref` - The dom element to bind our hook.
 - `callback: (event) => any` - The callback that runs after user click
