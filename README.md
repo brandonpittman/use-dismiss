@@ -39,7 +39,7 @@ export default () => {
 
 ```
 
-## Usage
+## API
 
-- `clickRef: element` - The dom element to bind our hook.
-- `callback: function` - The callback that runs after user click
+- `ref: React ref` - The dom element to bind our hook.
+- `callback: (event) => any` - The callback that runs after user click
