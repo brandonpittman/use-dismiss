@@ -13,7 +13,7 @@ npm i use-dismiss #or yarn add use-dismiss
 Import the hook:
 
 ```jsx
-import * as React from "react"
+import React from "react"
 import useDismiss from "use-dismiss";
 // or import { useClickAway, useEscape } from "use-dismiss" for just click away or escape listeners
 
