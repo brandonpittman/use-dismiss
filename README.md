@@ -12,15 +12,10 @@ npm i use-dismiss #or yarn add use-dismiss
 
 Import the hook:
 
-```javascript
-import useDismiss from "use-dismiss";
-// or import { useClickAway, useEscape } from "use-dismiss";
-```
-
-### 🌐 Full example
-
 ```jsx
 import * as React from "react"
+import useDismiss from "use-dismiss";
+// or import { useClickAway, useEscape } from "use-dismiss" for just click away or escape listeners
 
 export default () => {
   const [modal, setModal] = React.useState(false);
@@ -37,10 +32,9 @@ export default () => {
     </div>
   );
 }
-
 ```
 
 ## 📄 API
 
-- `ref: React ref` - The dom element to bind our hook.
+- `ref: RefObject<HTMLElement>` - The dom element to bind our hook.
 - `callback: (event) => any` - The callback that runs after user click
