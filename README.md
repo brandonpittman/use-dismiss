@@ -14,6 +14,7 @@ Import the hook:
 
 ```javascript
 import useDismiss from "use-dismiss";
+// or import { useClickAway, useEscape } from "use-dismiss";
 ```
 
 ### 🌐 Full example
