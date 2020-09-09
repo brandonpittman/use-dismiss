@@ -43,5 +43,8 @@
   },
   "bugs": {
     "url": "https://github.com/brandonpittman/use-dismiss/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
   }
 }
