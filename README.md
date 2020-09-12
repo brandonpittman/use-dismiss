@@ -19,16 +19,12 @@ import useDismiss from "use-dismiss";
 
 export default () => {
   const [modal, setModal] = React.useState(false);
-  const clickRef = React.useRef("");
-
-  useDismiss(clickRef, () => {
-    setModal(false);
-  });
+  const ref = useDismiss(() => setModal(false));
 
   return (
     <div className="container">
       <button onClick={() => setModal(true)}>Show Modal</button>
-      {modal && <div ref={clickRef} className="modal">Modal Content</div>}
+      { modal ? <div ref={ref}>Modal Content</div> : null }
     </div>
   );
 }
