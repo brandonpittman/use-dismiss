@@ -23,7 +23,7 @@ export const useClickAway = (callback) => {
   return ref
 };
 
-export const useEscape = (ref, callback) => {
+export const useEscape = (callback) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const useEscape = (ref, callback) => {
   return ref
 };
 
-const useDismiss = (ref, callback) => {
+const useDismiss = (callback) => {
   const ref = useRef(null);
 
   useEffect(() => {
