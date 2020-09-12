@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const MOUSEDOWN = "mousedown";
 const KEYDOWN = "keydown";
 const isEscaped = (event) => event.key === "Escape";
 const containsRef = (ref, event) => ref.current.contains(event.target);
 
-export const useClickAway = (ref, callback) => {
+export const useClickAway = (callback) => {
+  const ref = useRef(null);
   useEffect(() => {
-    const listener = (event) => {
+   const listener = (event) => {
       if (!ref || !ref.current || containsRef(ref, event)) {
         return;
       }
@@ -17,10 +18,14 @@ export const useClickAway = (ref, callback) => {
     return () => {
       document.removeEventListener(MOUSEDOWN, listener);
     };
-  }, [ref, callback]);
+  }, [callback]);
+
+  return ref
 };
 
 export const useEscape = (ref, callback) => {
+  const ref = useRef(null);
+
   useEffect(() => {
     const listener = (event) => {
       if (!ref || !ref.current || !isEscaped(event)) {
@@ -32,10 +37,14 @@ export const useEscape = (ref, callback) => {
     return () => {
       document.removeEventListener(KEYDOWN, listener);
     };
-  }, [ref, callback]);
+  }, [callback]);
+
+  return ref
 };
 
 const useDismiss = (ref, callback) => {
+  const ref = useRef(null);
+
   useEffect(() => {
     const mousedownListener = (event) => {
       if (!ref || !ref.current || containsRef(ref, event)) {
@@ -56,7 +65,9 @@ const useDismiss = (ref, callback) => {
       document.removeEventListener(MOUSEDOWN, mousedownListener);
       document.removeEventListener(KEYDOWN, keydownListener);
     };
-  }, [ref, callback]);
+  }, [callback]);
+
+  return ref
 };
 
 export default useDismiss;
