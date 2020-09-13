@@ -21,10 +21,12 @@
     "browser",
     "callback"
   ],
-  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir .",
-    "bump": "npm version",
+    "build": "yarn test && babel src --out-dir dist --ignore 'src/__tests__'",
     "example": "cd example && yarn install && yarn package",
     "prepublishOnly": "yarn build",
     "test": "jest",
@@ -41,8 +43,18 @@
     "@testing-library/react": "^11.0.2",
     "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/user-event": "^12.1.4",
+    "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-jest-dom": "^3.2.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-testing-library": "^3.8.0",
+    "husky": ">=4",
     "jest": "^26.4.2",
+    "lint-staged": ">=10",
     "nodemon": "^2.0.2",
+    "prettier": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1"
@@ -56,5 +68,15 @@
   },
   "peerDependencies": {
     "react": "^16.13.1"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mdx,html,css,md}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   }
 }

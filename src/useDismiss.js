@@ -8,7 +8,7 @@ const containsRef = (ref, event) => ref.current.contains(event.target);
 export const useClickAway = (callback) => {
   const ref = useRef(null);
   useEffect(() => {
-   const listener = (event) => {
+    const listener = (event) => {
       if (!ref || !ref.current || containsRef(ref, event)) {
         return;
       }
@@ -20,7 +20,7 @@ export const useClickAway = (callback) => {
     };
   }, [callback]);
 
-  return ref
+  return ref;
 };
 
 export const useEscape = (callback) => {
@@ -39,7 +39,7 @@ export const useEscape = (callback) => {
     };
   }, [callback]);
 
-  return ref
+  return ref;
 };
 
 const useDismiss = (callback) => {
@@ -67,7 +67,7 @@ const useDismiss = (callback) => {
     };
   }, [callback]);
 
-  return ref
+  return ref;
 };
 
 export default useDismiss;
