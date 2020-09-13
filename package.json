@@ -27,6 +27,7 @@
     "bump": "npm version",
     "example": "cd example && yarn install && yarn package",
     "prepublishOnly": "yarn build",
+    "test": "jest",
     "watch": "nodemon --watch src --exec \"yarn build\""
   },
   "license": "MIT",
@@ -35,9 +36,16 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "@testing-library/dom": "^7.24.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.2",
+    "@testing-library/react-hooks": "^3.4.1",
+    "@testing-library/user-event": "^12.1.4",
+    "jest": "^26.4.2",
     "nodemon": "^2.0.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1"
   },
   "repository": {
     "type": "git",
