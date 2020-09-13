@@ -21,6 +21,8 @@ module.exports = {
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
     "plugin:react-hooks/recommended",
+    "prettier",
+    "prettier/react",
   ],
   rules: {
     // your configuration
