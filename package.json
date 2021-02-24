@@ -68,7 +68,7 @@
     "url": "https://github.com/brandonpittman/use-dismiss/issues"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": ">=16.13.1"
   },
   "dependencies": {},
   "husky": {
